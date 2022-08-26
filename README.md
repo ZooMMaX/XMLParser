@@ -4,6 +4,9 @@
 
 ![Maven Central](https://img.shields.io/maven-central/v/ru.zoommax/XMLParser?style=plastic)
 ![GitHub](https://img.shields.io/github/license/ZooMMaX/XMLParser?style=plastic)
+[![GitHub issues](https://img.shields.io/github/issues/ZooMMaX/XMLParser?style=plastic)](https://github.com/ZooMMaX/XMLParser/issues)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ZooMMaX/XMLParser/Build?style=plastic)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/statusZooMMaX/XMLParser/Maven%20Central%20deploy?style=plastic)
 
 - Parses xml as nested XMLObjects
 - Runs on one or more threads
