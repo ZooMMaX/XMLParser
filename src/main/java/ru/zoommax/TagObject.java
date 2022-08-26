@@ -17,7 +17,7 @@ public class TagObject {
     private HashMap<String, HashMap<String, String>> tagParams = new HashMap<>();
 
     /**
-     * @return {@link HashMap<String,HashMap<String,String>}
+     * @return {@link HashMap} of {@link HashMap}
      * (tag name, HashMap(param name, value))
      */
     public HashMap<String, HashMap<String, String>> getTagParams() {
@@ -31,7 +31,6 @@ public class TagObject {
     /**
      * @param tagName {@link String} tag name
      * @return {@link TagObject}
-     * @throws {@link XMLException}
      */
     public TagObject getTagData(String tagName) throws XMLException {
         if (containsTagName(tagName)) {
@@ -45,7 +44,6 @@ public class TagObject {
      * @param tagName {@link String} tag name
      * @param tagIndex {@link Integer} tag index
      * @return {@link TagObject}
-     * @throws {@link XMLException}
      */
     public TagObject getTagData(String tagName, int tagIndex) throws XMLException {
         if (containsTagName(tagName)) {
