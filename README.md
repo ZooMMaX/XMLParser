@@ -1,8 +1,13 @@
 # XML PARSER
 
-
-
 ---
+
+![Maven Central](https://img.shields.io/maven-central/v/ru.zoommax/XMLParser?style=plastic)
+![GitHub](https://img.shields.io/github/license/ZooMMaX/XMLParser?style=plastic)
+[![GitHub issues](https://img.shields.io/github/issues/ZooMMaX/XMLParser?style=plastic)](https://github.com/ZooMMaX/XMLParser/issues)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ZooMMaX/XMLParser/Build?style=plastic)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/statusZooMMaX/XMLParser/Maven%20Central%20deploy?style=plastic)
+
 - Parses xml as nested XMLObjects
 - Runs on one or more threads
 - Getting tag parameters
@@ -11,24 +16,24 @@ An example of usage is available in src/tests/java/Main.java
 
 ### parse xml one thread
 ```java
-...
-        
-String xml = "xml format string";
-XMLReader xmlReader = new XMLReader(xml);
-
-...
+public class Main {
+    public static void main(String[] args) {
+        String xml = "xml format string";
+        XMLReader xmlReader = new XMLReader(xml);
+    }
+}
 ```
 
 ### parse xml multi thread
 ```java
-...
-        
-String xml = "xml format string";
-ExecutorService service = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-XMLReader xmlReader = new XMLReader(xml, service);
-service.shutdown();
-
-...
+public class Main {
+    public static void main(String[] args) {
+        String xml = "xml format string";
+        ExecutorService service = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        XMLReader xmlReader = new XMLReader(xml, service);
+        service.shutdown();
+    }
+}
 ```
 
 ### get Tag object
@@ -81,4 +86,21 @@ public class Main {
         //print: a
     }
 }
+```
+
+### Dependecy
+![dependency maven](https://img.shields.io/badge/DEPENDENCY-Maven-C71A36?style=plastic&logo=apachemaven)
+```xml
+<dependencies>
+    <dependency>
+        <groupId>ru.zoommax</groupId>
+        <artifactId>XMLReader</artifactId>
+        <version>1.0</version>
+    </dependency>
+</dependencies>
+```
+
+![dependency gradle](https://img.shields.io/badge/DEPENDENCY-Gradle-02303A?style=plastic&logo=gradle)
+```groovy
+implementation 'ru.zoommax:XMLReader:1.0'
 ```
